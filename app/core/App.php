@@ -29,7 +29,6 @@ class App {
         // Bagian Params
         if(!empty($url)) {
             $this->params = array_values($url);
-            var_dump($url);
         }
 
         // Jalankan controller & method, serta kirimkan params jiak ada

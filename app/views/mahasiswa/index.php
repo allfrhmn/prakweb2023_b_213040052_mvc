@@ -8,7 +8,7 @@
 
     <div class="row mb-3">
         <div class="col-lg-6">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+            <button type="button" class="btn btn-primary tombolTambahData" data-bs-toggle="modal" data-bs-target="#formModal">
                 Tambah Data Mahasiswa
             </button>
 
@@ -18,7 +18,8 @@
                     <li class="list-group-item">
                         <?= $mhs['nama']; ?>
                         <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="btn btn-danger float-end mx-1" onclick="return confirm('Apakah anda yakin dihapus ?')">Hapus</a>
-                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="btn btn-info float-end">Detail</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="btn btn-warning float-end mx-1 tampilModalUbah">Ubah</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="btn btn-info float-end mx-1">Detail</a>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -31,10 +32,11 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="judulModal">Tambah Data Mahasiswa</h1>
+                <h1 class="modal-title fs-5" id="formModalLabel">Tambah Data Mahasiswa</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <input type="hidden" id="id" name="id">
                 <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="POST">
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>

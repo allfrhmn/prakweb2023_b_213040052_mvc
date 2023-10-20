@@ -1,5 +1,11 @@
 <div class="container mt-3">
 
+    <div class="row">
+        <div class="col-lg-6">
+            <?php Flasher::flash(); ?>
+        </div>
+    </div>
+
     <div class="row mb-3">
         <div class="col-lg-6">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
@@ -46,9 +52,9 @@
 
                     <select class="form-select" aria-label="jurusan" name="jurusan">
                         <option selected>Jurusan</option>
-                        <option value="1">Teknik Informatika</option>
-                        <option value="2">Teknik Lingkungan</option>
-                        <option value="3">Manajemen</option>
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+                        <option value="Manajemen">Manajemen</option>
                     </select>
             </div>
             <div class="modal-footer">
